@@ -1,0 +1,41 @@
+/* Step 1: Make the <body> a flex container with a column layout */
+body {
+    display: flex;
+    flex-direction: column; /* Stacks <header>, <main>, and <footer> vertically */
+    height: 100vh; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin */
+  }
+  
+  /* Step 2: Make the <main> tag a flex container with a row layout */
+  main {
+    display: flex;
+    flex-direction: row; /* Places <article> and <aside> side by side */
+    flex: auto; /* Ensures <main> takes up available space */
+    height: auto; /* Allows <main> to adjust based on content */
+  }
+  
+  /* Step 3: Assign flex values to <article> and <aside> */
+  article {
+    flex: 2; /* Takes up 2 parts of the available space */
+    overflow-y: auto; /* Allows scrolling if content exceeds the height */
+  }
+  
+  aside {
+    flex: 1; /* Takes up 1 part of the available space */
+    overflow-y: auto; /* Allows scrolling if content exceeds the height */
+  }
+  
+  /* Step 4: Optional styling for <header> and <footer> */
+  header, footer {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+  }
+  
+  /* Step 5: Ensure <article> and <aside> are styled to show layout properly */
+  article, aside {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
